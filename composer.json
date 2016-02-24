@@ -1,0 +1,30 @@
+{
+  "name": "inside-view",
+  "type": "project",
+  "license": "ISC",
+  "description": "The Inside View website by Primary.",
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "composer/installers": "^1.0",
+    "vlucas/phpdotenv": "^2.2",
+    "johnpbloch/wordpress": "^4.4",
+    "oscarotero/env": "^1.0"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  }
+}
