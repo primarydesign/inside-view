@@ -1,0 +1,41 @@
+{
+	"devServer": {
+		"proxy": "http://localhost:8888/inside-view/web/"	
+	},
+	"paths": {
+		"root": {
+			"theme": "InsideView",
+			"src": "./src/",
+			"dest": "./web/app/themes/InsideView/"
+		},
+		"pages": {
+			"src": "./src/",
+			"dest": "./web/app/themes/InsideView",
+			"views": ["~/includes", "~/pages"],
+			"globs": ["~/*.*", "~/**/*.{twig,html,php}"]
+		},
+		"assets": {
+			"src": "./src/assets/",
+			"dest": "./web/app/themes/InsideView/assets/",
+			"globs": ["~/**/*", "!~/css/**/*", "!~/js/**/*", "~/img/**/*"],
+			"watch": "~/**/*.css"
+		},
+		"styles": {
+			"src": "./src/assets/css/",
+			"dest": "./web/app/themes/InsideView/assets/css/",
+			"globs": "~/*.css",
+			"watch": "~/**/*.css"
+		},
+		"scripts": {
+			"src": "./src/assets/js/",
+			"dest": "./web/app/themes/InsideView/assets/js/",
+			"globs": "~/*.js",
+			"watch": "~/**/*.js"
+		},
+		"images": {
+			"src": "./src/assets/img/",
+			"dest": "./web/app/themes/InsideView/assets/img/",
+			"globs": "~/**/*.{gif,jgp,png,svg}"
+		}
+	}
+}
