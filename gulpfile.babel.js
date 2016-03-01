@@ -42,7 +42,7 @@ function Scripts() {
 }
 function Images() {
 	return gulp.src($.images.globs)
-	.pipe(cached())
+	.pipe(require('gulp-print')())
 	.pipe(imagemin())
 	.pipe(gulp.dest($.images.dest))
 	.pipe(Browser.stream());
@@ -52,11 +52,11 @@ function Build(done) {
 }
 function Watch() {
 	if (argv.s) commence('serve');
-	gulp.watch($.pages.watch, Pages);
-	gulp.watch($.assets.watch, Assets);
-	gulp.watch($.styles.watch, Styles);
-	gulp.watch($.scripts.watch, Scripts);
-	gulp.watch($.images.watch, Images);
+	gulp.watch($.pages.watch, Pages).on('change', Browser.reload);
+	gulp.watch($.assets.watch, Assets).on('change', Browser.reload);
+	gulp.watch($.styles.watch, Styles).on('change', Browser.reload);
+	gulp.watch($.scripts.watch, Scripts).on('change', Browser.reload);
+	gulp.watch($.images.watch, Images).on('change', Browser.reload);
 }
 function Serve() {
 	return Browser.init(_.browsersync);

@@ -35,7 +35,7 @@
 		"images": {
 			"src": "./src/images/",
 			"dest": "./web/app/themes/InsideView/images/",
-			"globs": "~/**/*.{gif,jgp,png,svg}"
+			"globs": "./src/images/**/*.{gif,jpg,jpeg,png,svg}"
 		}
 	}
 }
