@@ -97,11 +97,6 @@ wp-content/plugins/hello.php
 .sass-cache/
 *.css.map
 
-
-### Less ###
-*.css
-
-
 ### OSX ###
 .DS_Store
 .AppleDouble
@@ -152,3 +147,4 @@ vendor/*
 
 # Themes
 web/app/themes
+!src

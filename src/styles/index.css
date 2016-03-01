@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic);
+@import 'menu.css';
+
+/* shadow to make page titles/breadcrmbs visible on light backgrounds */
+section#banner-section .banner-title .page-title {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+/* fix footer bg photo from stretching */
+.vc_custom_1434592732678 {
+   background-attachment: inherit !important;
+}
+section#banner-section .breadcrumbs {
+  display:none;
+}
+#banner-section .row {
+    top: 145px;
+}
+/* responsive 3-column to 1-column */
+@media (max-width: 640px) {
+  #block1, #block2, #block3 {
+    width: 100% !important;
+  }
+}
+/* Spaced heading styles */
+.dt-section-head.size-xlarge .section-main-title {
+  letter-spacing:3px;
+  color: #565656 !important;
+}
+.dt-section-head.left h2 {
+  letter-spacing: 2px;
+  line-height: 40px;
+  padding-bottom: 15px;
+}
+
+.service__subhead {
+  font-family: "Crimson Text" !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  margin:0;
+}
+
+.service__list {
+border-left: 1px solid #565656;
+list-style-type: none;
+font-size: 15px;
+line-height: 30px;
+margin-left: 10px;
+padding-left: 30px;
+color: #000;
+}
+
+.service__list li {
+line-height: 16px;
+padding: 5px 0 10px 0;
+}
+
+@media (width >= 768px) {
+  .contact-form-container  {
+    float: right;
+  }
+}
+.maps-container.vc_custom_1456865491096 {
+  padding-left: 15px !important;
+}
+
+.footer-social-icons {
+  display: block;
+  padding: 2.00rem 0 !important;
+  font-size: 0;
+  text-align: left;
+}
+.footer-social-icon {
+  display: inline-block;
+  margin-right: 1.00rem;
+  opacity: 0.90;
+  size: 2.50rem;
+  background: no-repeat center / cover !important;
+}
+.footer-social-icon[data-social='facebook'] {
+  background-image: url('images/icon-facebook.svg') !important;
+}
+.footer-social-icon[data-social='instagram'] {
+  background-image: url('images/icon-instagram.svg') !important;
+}

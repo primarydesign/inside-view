@@ -1,0 +1,38 @@
+@media (width > 990px)  {
+  .sub-nav.megamenu-sub {
+    /*opacity: 1 !important;*/
+    /*visibility: visible !important;*/
+    min-height: 20.00em !important;
+    padding-bottom: 3.00em !important;
+    padding-left: 2.00em !important;
+    background: #ffffff url('images/sub-menu-background.jpg') no-repeat top right / cover !important;
+  }
+  .sub-nav.megamenu-sub > li:nth-child(2) {
+    display: none !important;
+  }
+  .dt-megamenu li {
+    width: 28.00em !important;
+  }
+
+  .dt-menu-leftbar {
+    overflow: visible !important;
+  }
+  .menu-item {
+    cursor: pointer !important;
+    float: none !important;
+  }
+  .menu-item-header {
+    margin: 2.00em 0 0.80em;
+    & > a span {
+      font-family: 'Crimson Text', serif !important;
+      font-size: 1.80em !important;
+      letter-spacing: 0.15em;
+      text-transform: uppercase !important;
+    }
+  }
+  .menu-item:hover {
+    & > a span {
+      color: #545454 !important;
+    }
+  }
+}
