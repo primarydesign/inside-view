@@ -21,20 +21,20 @@
 			"watch": "~/**/*.css"
 		},
 		"styles": {
-			"src": "./src/assets/css/",
-			"dest": "./web/app/themes/InsideView/assets/css/",
-			"globs": "~/*.css",
+			"src": "./src/styles/",
+			"dest": "./web/app/themes/InsideView/",
+			"globs": "./src/style.css",
 			"watch": "~/**/*.css"
 		},
 		"scripts": {
-			"src": "./src/assets/js/",
-			"dest": "./web/app/themes/InsideView/assets/js/",
-			"globs": "~/*.js",
+			"src": "./src/scripts/",
+			"dest": "./web/app/themes/InsideView/scripts/",
+			"globs": "~/entries/**/*.js",
 			"watch": "~/**/*.js"
 		},
 		"images": {
-			"src": "./src/assets/img/",
-			"dest": "./web/app/themes/InsideView/assets/img/",
+			"src": "./src/images/",
+			"dest": "./web/app/themes/InsideView/images/",
 			"globs": "~/**/*.{gif,jgp,png,svg}"
 		}
 	}
