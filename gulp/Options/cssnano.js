@@ -1,11 +1,10 @@
 module.exports = {
   safe: true,
   sourcemaps: true,
-  autoprefixer: {browsers: ['ie >= 9', 'last 4 versions']},
   calc: {precision: 10},
   colormin: true,
   convertValues: false,
-  discardComments: true,
+  discardComments: false,
   discardDuplicates: true,
   discardEmpty: true,
   discardUnused: false,

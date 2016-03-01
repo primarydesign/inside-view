@@ -27,7 +27,6 @@ import root from 'postcss-atroot';
 import hexrgba from 'postcss-hexrgba';
 import color_alpha from 'postcss-color-alpha';
 import color_mix from 'postcss-color-mix';
-import time_machine from 'postcss-time-machine';
 /* optimizing */
 import doiuse from 'doiuse';
 import focus from 'postcss-focus';
@@ -35,16 +34,17 @@ import matches from "postcss-selector-matches";
 import not from "postcss-selector-not";
 import autoprefixer from 'autoprefixer';
 import mqpacker from "css-mqpacker";
+import cssnano from 'cssnano';
 /* logistic */
 import reporter from 'postcss-reporter';
 
 module.exports = [
   imports({
-    glob: true
+    glob: true,
+    plugins: [cssnano]
   }),
   media_custom,
   selectors,
-  time_machine,
   easings,
   magician,
   media_minmax,

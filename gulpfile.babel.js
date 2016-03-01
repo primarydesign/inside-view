@@ -8,7 +8,6 @@ import cssnano from 'gulp-cssnano';
 import cached from 'gulp-cached';
 import imagemin from 'gulp-imagemin';
 import bsync from 'browser-sync';
-import inline from 'gulp-inline';
 
 const Uppsta = direque('./gulp' ,{recurse: true});
 const Library = Uppsta.Library;
@@ -18,7 +17,6 @@ const _ = Uppsta.Options;
 
 function Pages() {
 	return gulp.src($.pages.globs)
-	.pipe(inline(_.inline))
 	.pipe(gulp.dest($.pages.dest))
 	.pipe(Browser.stream());
 }
@@ -45,7 +43,7 @@ function Images() {
 	return gulp.src($.images.globs)
 	.pipe(cached())
 	.pipe(imagemin())
-	.pipe(gulp.dest($.imaged.dest))
+	.pipe(gulp.dest($.images.dest))
 	.pipe(Browser.stream());
 }
 function Build(done) {
