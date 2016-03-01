@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import argv from 'yargs';
+import {argv} from 'yargs';
 import direque from 'require-dir';
 import named from 'vinyl-named';
 import webpack from 'webpack-stream';
@@ -8,6 +8,7 @@ import cssnano from 'gulp-cssnano';
 import cached from 'gulp-cached';
 import imagemin from 'gulp-imagemin';
 import bsync from 'browser-sync';
+import commence from 'run-sequence';
 
 const Uppsta = direque('./gulp' ,{recurse: true});
 const Library = Uppsta.Library;
@@ -47,20 +48,18 @@ function Images() {
 	.pipe(Browser.stream());
 }
 function Build(done) {
-	gulp.parallel(Pages, Assets, Styles, Scripts, Images, done);
+	commence(['pages', 'assets', 'styles', 'scripts', 'images'], done);
 }
-function watch() {
+function Watch() {
+	if (argv.s) commence('serve');
 	gulp.watch($.pages.watch, Pages);
 	gulp.watch($.assets.watch, Assets);
 	gulp.watch($.styles.watch, Styles);
 	gulp.watch($.scripts.watch, Scripts);
 	gulp.watch($.images.watch, Images);
 }
-function serve() {
-	Browser.init(_.browsersync);
-	if (argv.watch) {
-		gulp.parallel(Watch);
-	}
+function Serve() {
+	return Browser.init(_.browsersync);
 }
 
 gulp.task('pages', Pages);
@@ -68,5 +67,8 @@ gulp.task('assets', Assets);
 gulp.task('styles', Styles);
 gulp.task('scripts', Scripts);
 gulp.task('images', Images);
+gulp.task('build', Build);
+gulp.task('watch', Watch);
+gulp.task('serve', Serve);
 
 // gulp yargs require-dir vinyl-named gulp-webpack gulp-postcss gulp-cssnano gulp-cached gulp-imagemin browser-sync gulp-inline

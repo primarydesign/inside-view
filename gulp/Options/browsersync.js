@@ -2,8 +2,8 @@ import $ from '../configure.js';
 import { argv } from 'yargs';
 
 module.exports = {
-  server: { baseDir: $.paths.root.app },
-  port: argv.port || 3000,
+  server: false,
+  proxy: 'http://localhost:8888/inside-view/web/',
   ghostMode: false,
   open: Boolean(argv.u)
     ? 'ui'
