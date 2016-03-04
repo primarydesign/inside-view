@@ -47,3 +47,9 @@ div.esgbox-overlay {
 div.esg-overlay.esg-slide.eg-howardtaft-container {
   background-color: rgba(0,0,0,0.50) !important;
 }
+span.contact-form-newsletter-signup {
+  font-size: 1.25em;
+}
+span.add-newsletter {
+  margin-top: 0.25em !important;
+}
