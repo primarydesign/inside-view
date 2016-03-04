@@ -39,3 +39,11 @@
     margin-bottom: 1.00rem !important;
   }
 }
+
+div.esgbox-overlay {
+  background-image: none !important;
+  background-color: rgba(0,0,0,0.85) !important;
+}
+div.esg-overlay.esg-slide.eg-howardtaft-container {
+  background-color: rgba(0,0,0,0.50) !important;
+}
