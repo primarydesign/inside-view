@@ -142,6 +142,7 @@ web/.htaccess
 !.env.example
 
 # Vendor (e.g. Composer)
+web/vendor
 vendor/*
 !vendor/.gitkeep
 

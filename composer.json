@@ -4,7 +4,8 @@
   "license": "ISC",
   "description": "The Inside View website by Primary.",
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "vendor-dir": "web/vendor"
   },
   "repositories": [
     {
