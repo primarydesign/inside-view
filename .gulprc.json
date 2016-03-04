@@ -6,35 +6,35 @@
 		"root": {
 			"theme": "InsideView",
 			"src": "./src/",
-			"dest": "./web/wp-content/themes/InsideView/"
+			"dest": "./web/app/themes/InsideView/"
 		},
 		"pages": {
 			"src": "./src/",
-			"dest": "./web/wp-content/themes/InsideView",
+			"dest": "./web/app/themes/InsideView",
 			"views": ["~/includes", "~/pages"],
 			"globs": ["~/*.*", "~/**/*.{twig,html,php}", "!~/style.css"]
 		},
 		"assets": {
 			"src": "./src/assets/",
-			"dest": "./web/wp-content/themes/InsideView/assets/",
+			"dest": "./web/app/themes/InsideView/assets/",
 			"globs": ["~/**/*", "!~/css/**/*", "!~/js/**/*", "~/img/**/*"],
 			"watch": "~/**/*.css"
 		},
 		"styles": {
 			"src": "./src/styles/",
-			"dest": "./web/wp-content/themes/InsideView/",
+			"dest": "./web/app/themes/InsideView/",
 			"globs": "./src/style.css",
 			"watch": "~/**/*.css"
 		},
 		"scripts": {
 			"src": "./src/scripts/",
-			"dest": "./web/wp-content/themes/InsideView/scripts/",
+			"dest": "./web/app/themes/InsideView/scripts/",
 			"globs": "~/entries/**/*.js",
 			"watch": "~/**/*.js"
 		},
 		"images": {
 			"src": "./src/images/",
-			"dest": "./web/wp-content/themes/InsideView/images/",
+			"dest": "./web/app/themes/InsideView/images/",
 			"globs": "./src/images/**/*.{gif,jpg,jpeg,png,svg}"
 		}
 	}

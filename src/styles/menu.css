@@ -35,4 +35,7 @@
       color: #545454 !important;
     }
   }
+  ul.megamenu-sub li.menu-item {
+    margin-bottom: 1.00rem !important;
+  }
 }
