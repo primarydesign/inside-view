@@ -61,3 +61,11 @@ span.add-newsletter {
   color: #838383;
   cursor: pointer;
 }
+@media (min-width: 991px) {
+  div.blog.single-post.content.hentry {
+    margin-left: 20em !important;
+    & > .container {
+      width: 100%;
+    }
+  }
+}
