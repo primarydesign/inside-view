@@ -53,3 +53,11 @@ span.contact-form-newsletter-signup {
 span.add-newsletter {
   margin-top: 0.25em !important;
 }
+.backPortfolio__container {
+  margin-bottom: 0 !important;
+  text-align: right !important;
+}
+.backPortfolio__link {
+  color: #838383;
+  cursor: pointer;
+}
