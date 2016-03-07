@@ -117,3 +117,27 @@ div.google-map-container {
 .footer-social-icon[data-social='instagram'] {
   background-image: url('images/icon-instagram.svg') !important;
 }
+
+body.blog article.post {
+  .postimage, .postimagecontent,
+  .postinfo, .blog_info_author, .postcontent > p:not([class]),
+  .blog_info_comments {
+    display: none !important;
+  }
+  .blog_info_share {
+    margin-bottom: 0 !important;
+  }
+  .postborder {
+    margin-top: 20px !important;
+  }
+  .postmetabottom {
+    padding-top: 0 !important;
+  }
+  h2.blog-post-title a {
+    font-size: 35px !important;
+  }
+}
+
+.row + .clearfix {
+  display: none !important;
+}

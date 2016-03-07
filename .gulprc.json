@@ -12,7 +12,7 @@
 			"src": "./src/",
 			"dest": "./web/app/themes/InsideView",
 			"views": ["~/includes", "~/pages"],
-			"globs": ["~/*.*", "~/**/*.{twig,html,php}", "!~/style.css"]
+			"globs": ["~/**/*.php", "~/screenshot.png"]
 		},
 		"assets": {
 			"src": "./src/assets/",
